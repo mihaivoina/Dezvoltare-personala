@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
 import Questions from './questions'
+import ShowChart from './chart';
 
 function App() {
   return (
+    <>
     <Questions />
+    <ShowChart />
+  </>
   );
 }
 

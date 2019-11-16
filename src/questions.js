@@ -76,7 +76,7 @@ class Questions extends React.Component {
                         <p>{ el.question }</p>
                         { this.getRadio(el) }
                     </li>)) }
-                <button onClick={ this.handleClick }></button>
+                <button onClick={ this.handleClick }>Submit</button>
             </ul>
         )
     }
