@@ -2,6 +2,11 @@ import React from 'react';
 import Chart from 'chart.js';
 
 class ShowChart extends React.Component {
+
+    state = {
+        date: [4,6,3,4,5,6,7,5]
+    }
+
     componentDidMount() {
         this.updateCanvas();
     }
@@ -14,7 +19,7 @@ class ShowChart extends React.Component {
             data: {
                 labels:  ['Health', 'Relationships', 'Environment', 'Career', 'Money', 'Personal growth', 'Brightness of Life', 'Spiritual Life'],
                 datasets: [{
-                    data: [4,6,3,4,5,6,7,5],
+                    data: this.state.date,
                     backgroundColor: [
                         'rgba(2, 237, 61, 0.7)',
                         'rgba(237, 2, 2, 0.7)',
@@ -48,10 +53,13 @@ class ShowChart extends React.Component {
                 }
             }
         }); 
+        console.log(myCHart.data.datasets[0].data);
+        
     }
     render() {
+        // width={300} height={300}
         return (
-            <canvas ref="canvas" width={300} height={300}/>
+            <canvas ref="canvas" />
         );
     }
 }

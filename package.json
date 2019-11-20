@@ -12,7 +12,7 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 3002\"",
+    "start": "concurrently \"react-scripts start\" \"json-server --watch db1.json --port 3002\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
