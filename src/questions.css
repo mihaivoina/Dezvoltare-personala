@@ -2,6 +2,6 @@
     margin: 50px 200px;
 }
 
-.carousel.caption {
-    bottom: auto;
+.carousel-caption {
+    bottom: 200px;
 }

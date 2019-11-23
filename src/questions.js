@@ -5,7 +5,7 @@ import './questions.css'
 
 class Questions extends React.Component {
     state = {
-        numberOfQuestions: 4,
+        numberOfQuestions: 10,
         // topicList: null,
         randomQuestionList: [],
         results: null
@@ -142,6 +142,9 @@ class Questions extends React.Component {
         for (let result of results) {
             result.average = result.score/result.numOfQuestions;
         }
+        this.setState({
+            results
+        })
         console.log(results);
         
     }
@@ -167,6 +170,7 @@ class Questions extends React.Component {
                     </Carousel.Item>)) }
             </Carousel>
             <button onClick={ this.handleClick }>Submit</button>
+            {/* <Graph data={ this.state.results } /> */}
           </>
         )
     }
