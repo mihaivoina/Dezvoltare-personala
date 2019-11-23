@@ -1,519 +1,499 @@
 {
     "questions": [
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "The way you feel yourself",
+            "topic": "SĂNĂTATE ȘI ENERGIE",
+            "question": "Cât de fericit te simți cu starea generala de sănătate și de bună-dispoziție pe care le ai acum,  la acest moment?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Neutral",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Appearance (how you look)",
+            "topic": "SĂNĂTATE ȘI ENERGIE",
+            "question": "Cum apreciezi nivelul de energie pe care  îl ai pe parcursul unei zile?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Neutral",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Mobility (how much you move throughout the day)",
+            "topic": "SĂNĂTATE ȘI ENERGIE",
+            "question": "Dacă ar fi să iți dai singur o notă raportată la mișcarea fizică efectuată zilnic vs greutatea corporală pe care o ai, care ar fi acea nota?",
             "answers": {
-                "1": "None",
-                "2": "Very little",
-                "3": "Little",
-                "4": "Little more",
-                "5": "Very Much"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Mood",
+            "topic": "EMOȚII ȘI OBIECTIVE",
+            "question": "Cum te-ai aprecia din punct de vedere al stării psihologice, al calmului și al stării de spirit și al stabilității emoționale?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Neutral",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Walks (how much time you spend on fresh air)",
+            "topic": "EMOȚII ȘI OBIECTIVE",
+            "question": "Cum te apreciezi din punct de vedere emoțional al bunăstării pe care o ai?",
             "answers": {
-                "1": "0",
-                "2": "<15 minutes",
-                "3": "<30 minutes",
-                "4": "~30 minutes",
-                "5": "> 30 minutes"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Energy",
+            "topic": "EMOȚII ȘI OBIECTIVE",
+            "question": "Cât de echilibrat „jonglezi” cu nervii și cu provocarile emoționale cu care te confrunți zi de zi?",
             "answers": {
-                "1": "Very low",
-                "2": "Low",
-                "3": "Middle",
-                "4": "High",
-                "5": "Very high"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Nutrition",
+            "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
+            "question": "Cum ai descrie calitatea relațiilor tale sentimentale -  anterioare și actuale?",
             "answers": {
-                "1": "Fast food",
-                "2": "Not so healthy",
-                "3": "Neutral",
-                "4": "Healthy",
-                "5": "Very healthy"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Regime",
+            "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
+            "question": "Cum apreciezi calitatea relației și întreținerea acesteia cu membrii familiei?",
             "answers": {
-                "1": "Fast food",
-                "2": "Not so healthy",
-                "3": "Neutral",
-                "4": "Healthy",
-                "5": "Very healthy"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Sport",
+            "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
+            "question": "Cum ai aprecia calitatea relațiilor cu prietenii, colegii, partenerii de afaceri de până acum?",
             "answers": {
-                "1": "None",
-                "2": "Very few",
-                "3": "Some",
-                "4": "Some more",
-                "5": "A lot"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Health",
-            "message": "In this section you evaluate:",
-            "question": "Sleep",
+            "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
+            "question": "Cât de eficient și productiv ești în stabilirea și îndeplinirea sarcinilor și obiectivelor zilnice?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Relationships.",
-            "message": "How satisfied and fulfilled are you with the quality of relationships in your life?",
-            "question": "Communication with others",
+            "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
+            "question": "Cum te simți, vis-a-vis de timpul rămas la dispoziție pentru „alimentarea” pasiunii tale și lucrul la obiectivele personale, altele decât de sarcinile zilnice?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Neutral",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Relationships.",
-            "message": "How satisfied and fulfilled are you with the quality of relationships in your life?",
-            "question": "Friendship",
+            "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
+            "question": "Cum ai aprecia rata de îndeplinire a sarcinilor de tip multi-tasking și îndeplinirea sarcinilor personale și profesionale?",
             "answers": {
-                "1": "None",
-                "2": "Very few",
-                "3": "Few",
-                "4": "Many",
-                "5": "Very many"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Relationships.",
-            "message": "How satisfied and fulfilled are you with the quality of relationships in your life?",
-            "question": "Love (your partner)",
+            "topic": "PROFESIE/CARIERĂ/MISIUNE",
+            "question": "Cât de fericit(ă) ești acum cu job-ul pe care îl ai sau cu activitatea profesională pe care o faci? (oricare ar fi aceea)",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Relationships.",
-            "message": "How satisfied and fulfilled are you with the quality of relationships in your life?",
-            "question": "Family",
+            "topic": "PROFESIE/CARIERĂ/MISIUNE",
+            "question": "Cum apreciezi emoția și împlinirea pe care le simți la locul actual de muncă – cum evaluezi starea cu care te gângești la muncă?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Environment.",
-            "message": "Your physical environment includes your:",
-            "question": "Surroundings",
+            "topic": "PROFESIE/CARIERĂ/MISIUNE",
+            "question": "Ce notă ți-ai da în legătură cu prezența ta și cu potențialul de îndeplinire pe care îl are misiunea ta/ scopul tău?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Environment.",
-            "message": "Your physical environment includes your:",
-            "question": "Relatives",
+            "topic": "BANI/ECONOMII/FINANȚE",
+            "question": "Cât de „bine” stai acum, când vine vorba de sigurana ta financiară?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Environment.",
-            "message": "Your physical environment includes your:",
-            "question": "Colleagues",
+            "topic": "BANI/ECONOMII/FINANȚE",
+            "question": "Cum apreciezi veniturile tale curente față de cât crezi tu că ești capabil și cât meriți?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Environment.",
-            "message": "Your physical environment includes your:",
-            "question": "Acquaintances",
+            "topic": "BANI/ECONOMII/FINANȚE",
+            "question": "Evaluează nivelul tau de bunăstare financiară.",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Environment.",
-            "message": "Your physical environment includes your:",
-            "question": "Neighbors",
+            "topic": "CONTRIBUȚIE/SPIRITUALITATE",
+            "question": "Cum apreciezi abilitatea ta de a te bucura și celebra VIAȚA – orice ar însemna pentru tine personal, această exprimare și modalitățile de a o face?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Environment.",
-            "message": "Your physical environment includes your:",
-            "question": "Opponents",
+            "topic": "CONTRIBUȚIE/SPIRITUALITATE",
+            "question": "Cum apreciezi abilitatea ta de a te conecta și a împărtăși talentele personale și alte „daruri” specifice cu cei din jur și din comunitatea în care trăiești? Altfel spus, contribui cu generozitate și regularitate necondiționat (fara A TE G NDI  la vreo recompensă)?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Career.",
-            "message": "How satisfied are you with the work you do for a living?",
-            "question": "Job",
+            "topic": "CONTRIBUȚIE/SPIRITUALITATE",
+            "question": "Cu ce notă ți-ai evalua sensul și misiunea pe care o ai de îndeplinit în această viață?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Career.",
-            "message": "How satisfied are you with the work you do for a living?",
-            "question": "Career strategy",
+            "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
+            "question": "Cu ce notă ți-ai evalua gradul de responsabilitate pe care l-ai avut pana acum vis-a-vis de deciziile luate?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Career.",
-            "message": "How satisfied are you with the work you do for a living?",
-            "question": "Business",
+            "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
+            "question": "Ce notă ți-ai da pentru sinceritatea cu care ai răspuns până acum la întrebarile anterioare?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Career.",
-            "message": "How satisfied are you with the work you do for a living?",
-            "question": "Profession",
+            "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
+            "question": "Cât de aproape sau de departe simți că ești față de statutul de lider?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Career.",
-            "message": "How satisfied are you with the work you do for a living?",
-            "question": "Time investment",
+            "topic": "OBIECTIVE",
+            "question": "Cum te vezi din punct de vedere al sănătății și mișcării fizice peste 1-3 ani?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Career.",
-            "message": "How satisfied are you with the work you do for a living?",
-            "question": "Social status",
+            "topic": "OBIECTIVE",
+            "question": "Cum te vezi din punct de vedere al indeplinirii obiectivelor propuse și al vieții emoționale, peste 1-3 ani?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Money.",
-            "message": "Your finances.",
-            "question": "Expenses",
+            "topic": "OBIECTIVE",
+            "question": "Unde te vezi din punct de vedere relațional peste 1-3 ani?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Money.",
-            "message": "Your finances.",
-            "question": "Income",
+            "topic": "OBIECTIVE",
+            "question": "Cum te vezi din punct de vedere al managementului timpului, al eficienței și productivității peste 6 luni?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Personal growth.",
-            "message": "Do you have enough time for self-development? How satisfied are you with your personal growth?",
-            "question": "Education",
+            "topic": "OBIECTIVE",
+            "question": "Te vezi,  din punct de vedere profesional/al carierei realizat peste 5 ani?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Personal growth.",
-            "message": "Do you have enough time for self-development? How satisfied are you with your personal growth?",
-            "question": "Coaching",
+            "topic": "OBIECTIVE",
+            "question": "Cum te vezi din punct de vedere al situației financiare peste 3 ani?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         },
         {
-            "topic": "Personal growth.",
-            "message": "Do you have enough time for self-development? How satisfied are you with your personal growth?",
-            "question": "Special training",
+            "topic": "OBIECTIVE",
+            "question": "La ce nivel îți dorești să ajungă nivelul contribuțiilor tale către semeni și comunitate, peste 1- 3 ani?",
             "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Personal growth.",
-            "message": "Do you have enough time for self-development? How satisfied are you with your personal growth?",
-            "question": "Personal growth",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Personal growth.",
-            "message": "Do you have enough time for self-development? How satisfied are you with your personal growth?",
-            "question": "Reading",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Brightness of life.",
-            "message": "What is the quality of emotions you get from your life? What are the activities to make your life brighter?",
-            "question": "Entertainment",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Brightness of life.",
-            "message": "What is the quality of emotions you get from your life? What are the activities to make your life brighter?",
-            "question": "Relaxation",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Brightness of life.",
-            "message": "What is the quality of emotions you get from your life? What are the activities to make your life brighter?",
-            "question": "Hobby",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Brightness of life.",
-            "message": "What is the quality of emotions you get from your life? What are the activities to make your life brighter?",
-            "question": "Travelling",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Brightness of life.",
-            "message": "What is the quality of emotions you get from your life? What are the activities to make your life brighter?",
-            "question": "Impressions",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Spiritual life.",
-            "message": "Do you have a religion? Do you work on your spirituality? Do you express your spirit in Art? What are your beliefs?",
-            "question": "Religion",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Spiritual life.",
-            "message": "Do you have a religion? Do you work on your spirituality? Do you express your spirit in Art? What are your beliefs?",
-            "question": "Spiritual practices",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Spiritual life.",
-            "message": "Do you have a religion? Do you work on your spirituality? Do you express your spirit in Art? What are your beliefs?",
-            "question": "Beliefs",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Spiritual life.",
-            "message": "Do you have a religion? Do you work on your spirituality? Do you express your spirit in Art? What are your beliefs?",
-            "question": "Meditations",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
-            }
-        },
-        {
-            "topic": "Spiritual life.",
-            "message": "Do you have a religion? Do you work on your spirituality? Do you express your spirit in Art? What are your beliefs?",
-            "question": "Art",
-            "answers": {
-                "1": "Very bad",
-                "2": "Bad",
-                "3": "Acceptable",
-                "4": "Good",
-                "5": "Very good"
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8",
+                "9": "9",
+                "10": "10"
             }
         }
     ]
