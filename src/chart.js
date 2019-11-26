@@ -53,7 +53,7 @@ class ShowChart extends React.Component {
                 }
             }
         }); 
-        console.log(myCHart.data.datasets[0].data);
+        // console.log(myCHart.data.datasets[0].data);
         
     }
     render() {
