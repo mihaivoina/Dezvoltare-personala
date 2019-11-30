@@ -4,23 +4,68 @@ import Chart from 'chart.js';
 class ShowChart extends React.Component {
 
     state = {
-        date: [4,6,3,4,5,6,7,5]
+        result: null,
+        topics: null,
+        score: null
     }
 
+    // componentDidUpdate() {
+    //     if (this.props.data !== this.state.result) {
+    //         this.updateCanvas();
+    //     }
+    // }
+
+    // componentWillMount() {
+    //     let result = this.props.data;
+    //     let topics = [];
+    //     let score = [];
+    //     result.map(el => {
+    //         topics.push(el.topic);
+    //         score.push(el.average);
+    //         return;
+    //     });
+    //     console.log(score);
+    //     this.setState({
+    //         result,
+    //         topics,
+    //         score
+    //     }); 
+    // }
     componentDidMount() {
-        this.updateCanvas();
+        let result = this.props.data;
+        let topics = [];
+        let score = [];
+        result.map(el => {
+            topics.push(el.topic);
+            score.push(el.average);
+            return;
+        });
+        this.setState({
+            result,
+            topics,
+            score
+        }, () => {
+            this.updateCanvas();   
+        });
+
     }
-    updateCanvas() {
+    updateCanvas = () => {
+        console.log(this.state.score);
+        
         const ctx = this.refs.canvas.getContext('2d');
         ctx.fillRect(0,0, 100, 100);
 
         var myCHart = new Chart(ctx, {
             type: 'polarArea',
             data: {
-                labels:  ['Health', 'Relationships', 'Environment', 'Career', 'Money', 'Personal growth', 'Brightness of Life', 'Spiritual Life'],
+                labels: this.state.topics?this.state.topics:'',
                 datasets: [{
-                    data: this.state.date,
+                    data: this.state.score?this.state.score:'',
                     backgroundColor: [
+                        'blue',
+                        'red',
+                        'green',
+                        'yellow',
                         'rgba(2, 237, 61, 0.7)',
                         'rgba(237, 2, 2, 0.7)',
                         'rgba(237, 2, 214, 0.7)',
@@ -40,7 +85,7 @@ class ShowChart extends React.Component {
                     },
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 5
+                        suggestedMax: 10
                     }
                 },
                 responsive: true,
@@ -53,7 +98,7 @@ class ShowChart extends React.Component {
                 }
             }
         }); 
-        console.log(myCHart.data.datasets[0].data);
+        // console.log(myCHart.data.datasets[0].data);
         
     }
     render() {

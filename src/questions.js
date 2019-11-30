@@ -1,11 +1,12 @@
 import React from 'react';
 import Axios from 'axios';
 import { ToggleButtonGroup, ToggleButton, Carousel } from 'react-bootstrap';
-import './questions.css'
+import './questions.css';
+import ShowChart from './chart';
 
 class Questions extends React.Component {
     state = {
-        numberOfQuestions: 10,
+        numberOfQuestions: 3,
         // topicList: null,
         randomQuestionList: [],
         results: null
@@ -145,7 +146,7 @@ class Questions extends React.Component {
         this.setState({
             results
         })
-        console.log(results);
+        // console.log(results);
         
     }
 
@@ -170,7 +171,8 @@ class Questions extends React.Component {
                     </Carousel.Item>)) }
             </Carousel>
             <button onClick={ this.handleClick }>Submit</button>
-            {/* <Graph data={ this.state.results } /> */}
+            {/* { this.state.results?<ShowChart data={ [...this.state.results] } />:"" } */}
+            { this.state.results && <ShowChart data={ [...this.state.results] } /> }
           </>
         )
     }
