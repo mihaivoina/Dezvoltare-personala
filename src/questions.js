@@ -12,22 +12,9 @@ class Questions extends React.Component {
         displayQuestions: "showItem",
         results: null
     }
-
-
     async getQuestions () {
         const res = await Axios('http://localhost:3002/questions');
         const questions = res.data;
-        //  // create list with all question topics:
-        // const allTopics = questions.map(q => q.topic);
-        // // filter topics and create list with individual topics :
-        // const topicList = allTopics.reduce((topics, el) => {
-        //     if (!topics.includes(el)) {
-        //         topics.push(el);
-        //     }
-        //     return topics;
-        // },[]);
-        // create array with 10(can be how many you) random numbers coresponding to the question list:
-        // get a list of questions coresponding to the random numbers:
         const randomQuestionList = [];
         const random = this.randomNumbers(this.state.numberOfQuestions, questions.length);
         for (let num of random) {
@@ -42,7 +29,6 @@ class Questions extends React.Component {
             randomQuestionList
         });
     }
-
     //method for a list of random numbers depending on question list length:
     randomNumbers (howManyNumbers, maxNumber) {
         let numberList = [];
@@ -56,24 +42,6 @@ class Questions extends React.Component {
     }
 
     //method for creating radio buttons for every question:
-
-    // getRadio (obj) {
-    //     const radio = [];
-    //     for (let answer in obj.answers) {
-    //         let inputKey = obj.question.concat(answer)
-    //         let labelKey = answer.concat(obj.question)
-    //         radio.push(<input 
-    //             type="radio" 
-    //             name={ obj.question } 
-    //             id={ obj.answers.answer } 
-    //             value={ answer } 
-    //             key={ inputKey } 
-    //             checked={ this.state.randomQuestionList.question } 
-    //             onChange={ this.handleChange }/>)
-    //         radio.push(<label htmlFor= { obj.answers.answer } key={ labelKey }> { obj.answers[answer] }  </label>)
-    //     }
-    //     return radio;
-    // }
 
     getRadio (obj) {
         const radio = [];
@@ -114,7 +82,6 @@ class Questions extends React.Component {
             alert('Please answer all the questions')
             return;
         }
-        // const topicList = this.state.topicList;
         // create list with all question topics:
         const allTopics = finalAnswers.map(q => q.topic);
         // filter topics and create list with individual topics :
@@ -176,7 +143,6 @@ class Questions extends React.Component {
                     </Carousel>
                 </div>
                 <button onClick={ this.handleClick }>Submit</button>
-                {/* { this.state.results?<ShowChart data={ [...this.state.results] } />:"" } */}
                 { this.state.results && <ShowChart data={ [...this.state.results] } /> }
             </>
         )
