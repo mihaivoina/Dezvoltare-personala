@@ -9,6 +9,7 @@ class Questions extends React.Component {
         numberOfQuestions: 3,
         // topicList: null,
         randomQuestionList: [],
+        displayQuestions: "showItem",
         results: null
     }
 
@@ -143,8 +144,10 @@ class Questions extends React.Component {
         for (let result of results) {
             result.average = result.score/result.numOfQuestions;
         }
+        const displayQuestions = "hideItem";
         this.setState({
-            results
+            results,
+            displayQuestions
         })
         // console.log(results);
         
@@ -157,28 +160,26 @@ class Questions extends React.Component {
     render () {
         return(
             <>
-            <Carousel interval={ null } wrap={ false }>
-                { this.state.randomQuestionList.map(el => (
-                    <Carousel.Item key={ el.question }>
-                        <img className="d-block w-100" src='Black.png' alt='Background' />
-                        <Carousel.Caption key={ el.question }>
-                            {/* <p>{ el.message }</p> */}
-                            <p>{ el.question }</p>
-                            <ToggleButtonGroup type='radio' name={ el.question }>
-                            { this.getRadio(el) }
-                            </ToggleButtonGroup>
-                        </Carousel.Caption>
-                    </Carousel.Item>)) }
-            </Carousel>
-            <button onClick={ this.handleClick }>Submit</button>
-            {/* { this.state.results?<ShowChart data={ [...this.state.results] } />:"" } */}
-            { this.state.results && <ShowChart data={ [...this.state.results] } /> }
-          </>
+                <div className={ this.state.displayQuestions }>
+                    <Carousel interval={ null } wrap={ false }>
+                        { this.state.randomQuestionList.map(el => (
+                            <Carousel.Item key={ el.question }>
+                                <img className="d-block w-100" src='Black.png' alt='Background' />
+                                <Carousel.Caption key={ el.question }>
+                                    {/* <p>{ el.message }</p> */}
+                                    <p>{ el.question }</p>
+                                    <ToggleButtonGroup type='radio' name={ el.question }>
+                                    { this.getRadio(el) }
+                                    </ToggleButtonGroup>
+                                </Carousel.Caption>
+                            </Carousel.Item>)) }
+                    </Carousel>
+                </div>
+                <button onClick={ this.handleClick }>Submit</button>
+                {/* { this.state.results?<ShowChart data={ [...this.state.results] } />:"" } */}
+                { this.state.results && <ShowChart data={ [...this.state.results] } /> }
+            </>
         )
     }
 };
 export default Questions;
-
-
-
-// value = [ {"topic":"life", "score":"15"}]

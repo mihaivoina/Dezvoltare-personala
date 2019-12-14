@@ -5,3 +5,8 @@
 .carousel-caption {
     bottom: 200px;
 }
+
+.hideItem {
+    display: none;
+}
+
