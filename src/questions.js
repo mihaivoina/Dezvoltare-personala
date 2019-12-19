@@ -1,15 +1,15 @@
 import React from 'react';
 import Axios from 'axios';
-import { ToggleButtonGroup, ToggleButton, Carousel } from 'react-bootstrap';
+import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import './questions.css';
 import ShowChart from './chart';
 
 class Questions extends React.Component {
     state = {
         numberOfQuestions: 3,
-        // topicList: null,
         randomQuestionList: [],
         displayQuestions: "showItem",
+        questionIndex: 0,
         results: null
     }
     async getQuestions () {
@@ -41,8 +41,16 @@ class Questions extends React.Component {
         return numberList;
     }
 
-    //method for creating radio buttons for every question:
+    //sets the index of the question to be displayed
+    setIndex = (el) => {
+        let questionIndex = this.state.questionIndex + Number(el.target.value);
+        this.setState({
+            questionIndex
+        })
+        return;
+    }
 
+    //method for creating radio buttons for every question:
     getRadio (obj) {
         const radio = [];
         for (let answer in obj.answers) {
@@ -115,9 +123,7 @@ class Questions extends React.Component {
         this.setState({
             results,
             displayQuestions
-        })
-        // console.log(results);
-        
+        })  
     }
 
     componentDidMount () {
@@ -128,20 +134,17 @@ class Questions extends React.Component {
         return(
             <>
                 <div className={ this.state.displayQuestions }>
-                    <Carousel interval={ null } wrap={ false }>
-                        { this.state.randomQuestionList.map(el => (
-                            <Carousel.Item key={ el.question }>
-                                <img className="d-block w-100" src='Black.png' alt='Background' />
-                                <Carousel.Caption key={ el.question }>
-                                    {/* <p>{ el.message }</p> */}
-                                    <p>{ el.question }</p>
-                                    <ToggleButtonGroup type='radio' name={ el.question }>
-                                    { this.getRadio(el) }
-                                    </ToggleButtonGroup>
-                                </Carousel.Caption>
-                            </Carousel.Item>)) }
-                    </Carousel>
+                    { this.state.randomQuestionList[this.state.questionIndex] &&
+                        <p>
+                        { this.state.randomQuestionList[this.state.questionIndex].question }
+                    </p>}
+                    { this.state.randomQuestionList[this.state.questionIndex] &&
+                        <ToggleButtonGroup type='radio' name={ this.state.randomQuestionList[this.state.questionIndex].question }>
+                            { this.getRadio(this.state.randomQuestionList[this.state.questionIndex]) }
+                        </ToggleButtonGroup> } 
                 </div>
+                <button value='-1' onClick={ this.setIndex } className={this.state.questionIndex===0?'hideItem':'toggleButton'}>Previous</button>
+                <button value='1' onClick={ this.setIndex } className={this.state.questionIndex+1===this.state.numberOfQuestions?'hideItem':'toggleButton'}>Next</button>
                 <button onClick={ this.handleClick }>Submit</button>
                 { this.state.results && <ShowChart data={ [...this.state.results] } /> }
             </>
