@@ -6,7 +6,7 @@ import ShowChart from './chart';
 
 class Questions extends React.Component {
     state = {
-        numberOfQuestions: 3,
+        numberOfQuestions: 10,
         randomQuestionList: [],
         displayQuestions: "showItem",
         questionIndex: 0,
@@ -25,7 +25,6 @@ class Questions extends React.Component {
         }
 
         this.setState({
-            // topicList,
             randomQuestionList
         });
     }
@@ -56,7 +55,7 @@ class Questions extends React.Component {
         for (let answer in obj.answers) {
             let inputKey = obj.question.concat(answer);
             radio.push(<ToggleButton
-                variant='primary'
+                variant='btn btn-outline-primary'
                 name={ obj.question } 
                 id={ obj.answers.answer } 
                 value={ answer } 
@@ -69,6 +68,7 @@ class Questions extends React.Component {
         return radio;
     }
 
+    // method for answers selection
     handleChange = e => {
         const value = e.target.value;
         const question = e.target.name;
@@ -84,6 +84,7 @@ class Questions extends React.Component {
         })
     }
 
+    // submit action
     handleClick = () => {
         const finalAnswers = this.state.randomQuestionList;
         if (finalAnswers.find(el => el.score === '')) {
@@ -126,6 +127,14 @@ class Questions extends React.Component {
         })  
     }
 
+    // method for navigating questions list
+    navigateQuestions = (el) => {
+        const questionIndex = Number(el.target.value);
+        this.setState({
+            questionIndex
+        });
+    }
+
     componentDidMount () {
         this.getQuestions();
     }
@@ -133,20 +142,45 @@ class Questions extends React.Component {
     render () {
         return(
             <>
-                <div className={ this.state.displayQuestions }>
-                    { this.state.randomQuestionList[this.state.questionIndex] &&
-                        <p>
-                        { this.state.randomQuestionList[this.state.questionIndex].question }
-                    </p>}
-                    { this.state.randomQuestionList[this.state.questionIndex] &&
-                        <ToggleButtonGroup type='radio' name={ this.state.randomQuestionList[this.state.questionIndex].question }>
-                            { this.getRadio(this.state.randomQuestionList[this.state.questionIndex]) }
-                        </ToggleButtonGroup> } 
+                <div className={ this.state.displayQuestions.concat(' container') }>
+                    <div>
+                    { this.state.randomQuestionList.map((el, index) => (
+                        <div className={ index === this.state.questionIndex?"":"hideItem"} key={ el.question.concat(index)}>
+                            <p>{ el.question }</p>
+                            <ToggleButtonGroup type='radio' name={ el.question }>
+                                { this.getRadio(el) }
+                            </ToggleButtonGroup>
+                        </div>)) }
+                    </div>
+                    <div className='row justify-content-center'>
+                        <button 
+                        value='-1' 
+                        disabled={ this.state.questionIndex===0 }
+                        onClick={ this.setIndex } 
+                        className='btn btn-primary'>
+                            Previous
+                        </button>
+                        { this.state.randomQuestionList.map((el, index) => (
+                            <button 
+                            key={ index } 
+                            value={ index } 
+                            className={ index===this.state.questionIndex?'btn btn-outline-info active':'btn btn-outline-info' } 
+                            onClick={ this.navigateQuestions }>
+                                { index + 1 }
+                            </button>)) }
+                        <button 
+                        value='1'
+                        disabled={ this.state.questionIndex+1===this.state.numberOfQuestions } 
+                        onClick={ this.setIndex } 
+                        className='btn btn-primary'>
+                            Next
+                        </button>
+                    </div>
+                    <div className='row justify-content-center'>
+                        <button className='btn btn-primary' onClick={ this.handleClick }>Submit</button>
+                    </div>
                 </div>
-                <button value='-1' onClick={ this.setIndex } className={this.state.questionIndex===0?'hideItem':'toggleButton'}>Previous</button>
-                <button value='1' onClick={ this.setIndex } className={this.state.questionIndex+1===this.state.numberOfQuestions?'hideItem':'toggleButton'}>Next</button>
-                <button onClick={ this.handleClick }>Submit</button>
-                { this.state.results && <ShowChart data={ [...this.state.results] } /> }
+                { this.state.results && <ShowChart data={ [...this.state.results] } /> }       
             </>
         )
     }
