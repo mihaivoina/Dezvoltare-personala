@@ -6,7 +6,7 @@ import ShowChart from './chart';
 
 class Questions extends React.Component {
     state = {
-        numberOfQuestions: 10,
+        numberOfQuestions: 3,
         randomQuestionList: [],
         displayQuestions: "showItem",
         questionIndex: 0,
@@ -142,14 +142,21 @@ class Questions extends React.Component {
     render () {
         return(
             <>
+                <div className='logo'>
+                    <img src="./images/meta4all.png" alt="logo"></img>
+                </div>
                 <div className={ this.state.displayQuestions.concat(' container') }>
-                    <div>
+                    <div className='questionContainer'>
                     { this.state.randomQuestionList.map((el, index) => (
                         <div className={ index === this.state.questionIndex?"":"hideItem"} key={ el.question.concat(index)}>
-                            <p>{ el.question }</p>
-                            <ToggleButtonGroup type='radio' name={ el.question }>
-                                { this.getRadio(el) }
-                            </ToggleButtonGroup>
+                            <div className='question'>
+                                <p>{ el.question }</p>
+                            </div>
+                            <div className='answers'>
+                                <ToggleButtonGroup type='radio' name={ el.question }>
+                                    { this.getRadio(el) }
+                                </ToggleButtonGroup>
+                            </div>
                         </div>)) }
                     </div>
                     <div className='row justify-content-center'>
@@ -157,7 +164,7 @@ class Questions extends React.Component {
                         value='-1' 
                         disabled={ this.state.questionIndex===0 }
                         onClick={ this.setIndex } 
-                        className='btn btn-primary'>
+                        className='btn btn-primary stepButton'>
                             Previous
                         </button>
                         { this.state.randomQuestionList.map((el, index) => (
@@ -172,7 +179,7 @@ class Questions extends React.Component {
                         value='1'
                         disabled={ this.state.questionIndex+1===this.state.numberOfQuestions } 
                         onClick={ this.setIndex } 
-                        className='btn btn-primary'>
+                        className='btn btn-primary stepButton'>
                             Next
                         </button>
                     </div>

@@ -17,3 +17,43 @@
 .answersButton {
     margin: 0, 10px;
 }
+
+.stepButton {
+    margin:0, 10px;
+}
+
+.logo {
+    padding: 20px;
+}
+
+.questionContainer {
+    margin:20px 0px 20px;
+}
+
+.question {
+    overflow: auto;
+    height: 190px;
+    border-radius: 20px 20px 0 0;
+    margin: auto;
+    padding: 30px;
+    background-color: #ffd25b;
+}
+
+.question p {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.answers {
+    border-radius: 0 0 20px 20px;
+    margin: auto;
+    padding: 30px;
+    background-color: #ffc734;
+    text-align: center;
+}
+
+
+
+
+/* ffd25b */
