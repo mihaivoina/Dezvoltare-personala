@@ -6,6 +6,11 @@
     bottom: 200px;
 }
 
+.showItem {
+    margin: auto;
+    padding: 0;
+}
+
 .hideItem {
     display: none;
 }
@@ -23,17 +28,18 @@
 }
 
 .logo {
-    padding: 20px;
+    margin: auto;
+    padding: 10px;
 }
 
 .questionContainer {
-    margin:20px 0px 20px;
+    margin:0px;
 }
 
 .question {
     overflow: auto;
     height: 190px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px 10px 0 0;
     margin: auto;
     padding: 30px;
     background-color: #ffd25b;
@@ -46,14 +52,60 @@
 }
 
 .answers {
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
     margin: auto;
     padding: 30px;
     background-color: #ffc734;
     text-align: center;
 }
 
+.answersButton {
+    margin: 100px;
+}
 
+.answered {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: black;
+}
 
+.navButton {
+    width: 75px;
+    margin: 0.5rem 0.25rem 0;
+}
 
-/* ffd25b */
+.indexButtonsContainer {
+    margin: auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.indexButton {
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    align-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

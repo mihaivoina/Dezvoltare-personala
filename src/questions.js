@@ -140,10 +140,15 @@ class Questions extends React.Component {
     }
 
     render () {
+        const showSubmitButton = this.state.randomQuestionList.every(question => question.score !== "")
         return(
             <>
-                <div className='logo'>
-                    <img src="./images/meta4all.png" alt="logo"></img>
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='logo col-6 col-md-4 col-xl-12 justify-content-center'>
+                            <img src="./images/meta4all.png" alt="logo"></img>
+                        </div>
+                    </div>
                 </div>
                 <div className={ this.state.displayQuestions.concat(' container') }>
                     <div className='questionContainer'>
@@ -160,31 +165,40 @@ class Questions extends React.Component {
                         </div>)) }
                     </div>
                     <div className='row justify-content-center'>
+                        <button className={ showSubmitButton?'btn btn-success navButton':'hideItem' } onClick={ this.handleClick }>Evaluati</button>
+                    </div>
+                    <div className='row justify-content-center'>
                         <button 
                         value='-1' 
                         disabled={ this.state.questionIndex===0 }
                         onClick={ this.setIndex } 
-                        className='btn btn-primary stepButton'>
-                            Previous
+                        className='btn btn-primary stepButton navButton'>
+                            Inapoi
                         </button>
-                        { this.state.randomQuestionList.map((el, index) => (
-                            <button 
-                            key={ index } 
-                            value={ index } 
-                            className={ index===this.state.questionIndex?'btn btn-outline-info active':'btn btn-outline-info' } 
-                            onClick={ this.navigateQuestions }>
-                                { index + 1 }
-                            </button>)) }
                         <button 
                         value='1'
                         disabled={ this.state.questionIndex+1===this.state.numberOfQuestions } 
                         onClick={ this.setIndex } 
-                        className='btn btn-primary stepButton'>
-                            Next
+                        className='btn btn-primary stepButton navButton'>
+                            Inainte
                         </button>
                     </div>
                     <div className='row justify-content-center'>
-                        <button className='btn btn-primary' onClick={ this.handleClick }>Submit</button>
+                        <div className='indexButtonsContainer'>
+                            { this.state.randomQuestionList.map((el, index) => {
+                                const answeredQuestion = this.state.randomQuestionList[index].score ===""?"":" answered"
+                                const currentButton = index===this.state.questionIndex?'btn btn-outline-info active':('btn btn-outline-info').concat(answeredQuestion);
+                                const button =
+                                <button 
+                                key={ index } 
+                                value={ index } 
+                                className={ (currentButton).concat(' indexButton') } 
+                                onClick={ this.navigateQuestions }>
+                                    { index + 1 }
+                                </button>
+                                return button;
+                            }) }
+                        </div>
                     </div>
                 </div>
                 { this.state.results && <ShowChart data={ [...this.state.results] } /> }       
