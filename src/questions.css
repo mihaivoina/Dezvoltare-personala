@@ -59,8 +59,16 @@
     text-align: center;
 }
 
+.answersButtonsContainer {
+    margin: auto;
+    padding: 0 1rem;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
 .answersButton {
-    margin: 100px;
+    border-radius: 0.25rem !important;
+    margin: 0.5rem;
 }
 
 .answered {
@@ -76,6 +84,7 @@
 
 .indexButtonsContainer {
     margin: auto;
+    margin-bottom: 2rem;
     padding: 0 1rem;
     text-align: center;
 }

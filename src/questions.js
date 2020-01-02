@@ -6,7 +6,7 @@ import ShowChart from './chart';
 
 class Questions extends React.Component {
     state = {
-        numberOfQuestions: 3,
+        numberOfQuestions: 15,
         randomQuestionList: [],
         displayQuestions: "showItem",
         questionIndex: 0,
@@ -55,7 +55,7 @@ class Questions extends React.Component {
         for (let answer in obj.answers) {
             let inputKey = obj.question.concat(answer);
             radio.push(<ToggleButton
-                variant='btn btn-outline-primary'
+                variant='btn btn-outline-primary answersButton'
                 name={ obj.question } 
                 id={ obj.answers.answer } 
                 value={ answer } 
@@ -158,7 +158,7 @@ class Questions extends React.Component {
                                 <p>{ el.question }</p>
                             </div>
                             <div className='answers'>
-                                <ToggleButtonGroup type='radio' name={ el.question }>
+                                <ToggleButtonGroup type='radio' name={ el.question } className='answersButtonsContainer'>
                                     { this.getRadio(el) }
                                 </ToggleButtonGroup>
                             </div>
