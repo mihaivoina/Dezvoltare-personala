@@ -6,7 +6,7 @@ import ShowChart from './chart';
 
 class Questions extends React.Component {
     state = {
-        numberOfQuestions: 15,
+        numberOfQuestions: 2,
         randomQuestionList: [],
         displayQuestions: "showItem",
         questionIndex: 0,
@@ -23,7 +23,6 @@ class Questions extends React.Component {
         for (let question of randomQuestionList) {
             question.score = "";
         }
-
         this.setState({
             randomQuestionList
         });
@@ -32,7 +31,7 @@ class Questions extends React.Component {
     randomNumbers (howManyNumbers, maxNumber) {
         let numberList = [];
         while (numberList.length < howManyNumbers) {
-            let random = Math.floor(Math.random()*(maxNumber-1))
+            let random = Math.floor(Math.random()*maxNumber)
             if (!numberList.includes(random)) {
                 numberList.push(random)
             }
@@ -120,6 +119,8 @@ class Questions extends React.Component {
         for (let result of results) {
             result.average = result.score/result.numOfQuestions;
         }
+        // console.log(document.URL);
+        
         const displayQuestions = "hideItem";
         this.setState({
             results,
