@@ -3,6 +3,8 @@ import Axios from 'axios';
 import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import './questions.css';
 import ShowChart from './chart';
+import ErrorDisplay from './errorComponent/errorDisplay';
+// import Header from './header/header';
 
 class Questions extends React.Component {
     state = {
@@ -10,10 +12,27 @@ class Questions extends React.Component {
         randomQuestionList: [],
         displayQuestions: "showItem",
         questionIndex: 0,
-        results: null
+        results: null,
+        token: null,
+        errorLog: null
+    }
+    getToken () {
+        const tokenArray = document.URL.split("#");
+        const token = tokenArray[tokenArray.length - 1];
+        this.setState({
+            token
+        }, () => this.getQuestions ());
     }
     async getQuestions () {
-        const res = await Axios('http://localhost:3002/questions');
+        const errorLog = [];
+        const res = await Axios(`http://localhost:3002/${ this.state.token }`).catch((error) => errorLog.push(error));
+        if (errorLog.length) {
+            console.log(errorLog);
+            this.setState ({
+                errorLog
+            })
+            return;
+        }
         const questions = res.data;
         const randomQuestionList = [];
         const random = this.randomNumbers(this.state.numberOfQuestions, questions.length);
@@ -84,7 +103,7 @@ class Questions extends React.Component {
     }
 
     // submit action
-    handleClick = () => {
+    evaluateQuestions = () => {
         const finalAnswers = this.state.randomQuestionList;
         if (finalAnswers.find(el => el.score === '')) {
             alert('Please answer all the questions')
@@ -119,13 +138,14 @@ class Questions extends React.Component {
         for (let result of results) {
             result.average = result.score/result.numOfQuestions;
         }
-        // console.log(document.URL);
         
         const displayQuestions = "hideItem";
         this.setState({
             results,
             displayQuestions
         })  
+        console.log(this.state.randomQuestionList);
+        
     }
 
     // method for navigating questions list
@@ -137,20 +157,23 @@ class Questions extends React.Component {
     }
 
     componentDidMount () {
-        this.getQuestions();
+        this.getToken();
+        // this.getQuestions();
     }
 
     render () {
         const showSubmitButton = this.state.randomQuestionList.every(question => question.score !== "")
+        if (this.state.errorLog) {
+            return (
+                <>
+                    {/* <Header /> */}
+                    <ErrorDisplay error={ this.state.errorLog} />
+                </>
+            );
+        }
         return(
             <>
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div className='logo col-6 col-md-4 col-xl-12 justify-content-center'>
-                            <img src="./images/meta4all.png" alt="logo"></img>
-                        </div>
-                    </div>
-                </div>
+                {/* <Header /> */}
                 <div className={ this.state.displayQuestions.concat(' container') }>
                     <div className='questionContainer'>
                     { this.state.randomQuestionList.map((el, index) => (
@@ -166,7 +189,7 @@ class Questions extends React.Component {
                         </div>)) }
                     </div>
                     <div className='row justify-content-center'>
-                        <button className={ showSubmitButton?'btn btn-success navButton':'hideItem' } onClick={ this.handleClick }>Evaluati</button>
+                        <button className={ showSubmitButton?'btn btn-success navButton':'hideItem' } onClick={ this.evaluateQuestions }>Evaluati</button>
                     </div>
                     <div className='row justify-content-center'>
                         <button 

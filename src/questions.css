@@ -1,11 +1,3 @@
-.carousel {
-    margin: 50px 200px;
-}
-
-.carousel-caption {
-    bottom: 200px;
-}
-
 .showItem {
     margin: auto;
     padding: 0;
@@ -25,11 +17,6 @@
 
 .stepButton {
     margin:0, 10px;
-}
-
-.logo {
-    margin: auto;
-    padding: 10px;
 }
 
 .questionContainer {

@@ -1,0 +1,10 @@
+.header-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-container div img {
+      height: 120px;
+    }
+}
