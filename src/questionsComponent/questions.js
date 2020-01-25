@@ -2,9 +2,12 @@ import React from 'react';
 import Axios from 'axios';
 import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import './questions.css';
-import ShowChart from './chart';
-import ErrorDisplay from './errorComponent/errorDisplay';
-// import Header from './header/header';
+import ShowChart from '../chart';
+import randomNumbers from './randomNumbers';
+import DisplayButton from './displayButton';
+import NavigationButton from './navigationButton';
+import RequestError from '../errorComponent/requestError';
+import LoadingDisplay from './loadingDisplay';
 
 class Questions extends React.Component {
     state = {
@@ -14,6 +17,7 @@ class Questions extends React.Component {
         questionIndex: 0,
         results: null,
         token: null,
+        loadingQuestions: true,
         errorLog: null
     }
     getToken () {
@@ -27,7 +31,6 @@ class Questions extends React.Component {
         const errorLog = [];
         const res = await Axios(`http://localhost:3002/${ this.state.token }`).catch((error) => errorLog.push(error));
         if (errorLog.length) {
-            console.log(errorLog);
             this.setState ({
                 errorLog
             })
@@ -35,7 +38,7 @@ class Questions extends React.Component {
         }
         const questions = res.data;
         const randomQuestionList = [];
-        const random = this.randomNumbers(this.state.numberOfQuestions, questions.length);
+        const random = randomNumbers(this.state.numberOfQuestions, questions.length);
         for (let num of random) {
             randomQuestionList.push(questions[num])
         }
@@ -43,19 +46,9 @@ class Questions extends React.Component {
             question.score = "";
         }
         this.setState({
-            randomQuestionList
+            randomQuestionList,
+            loadingQuestions: false
         });
-    }
-    //method for a list of random numbers depending on question list length:
-    randomNumbers (howManyNumbers, maxNumber) {
-        let numberList = [];
-        while (numberList.length < howManyNumbers) {
-            let random = Math.floor(Math.random()*maxNumber)
-            if (!numberList.includes(random)) {
-                numberList.push(random)
-            }
-        }
-        return numberList;
     }
 
     //sets the index of the question to be displayed
@@ -105,10 +98,6 @@ class Questions extends React.Component {
     // submit action
     evaluateQuestions = () => {
         const finalAnswers = this.state.randomQuestionList;
-        if (finalAnswers.find(el => el.score === '')) {
-            alert('Please answer all the questions')
-            return;
-        }
         // create list with all question topics:
         const allTopics = finalAnswers.map(q => q.topic);
         // filter topics and create list with individual topics :
@@ -138,14 +127,11 @@ class Questions extends React.Component {
         for (let result of results) {
             result.average = result.score/result.numOfQuestions;
         }
-        
         const displayQuestions = "hideItem";
         this.setState({
             results,
             displayQuestions
         })  
-        console.log(this.state.randomQuestionList);
-        
     }
 
     // method for navigating questions list
@@ -166,14 +152,13 @@ class Questions extends React.Component {
         if (this.state.errorLog) {
             return (
                 <>
-                    {/* <Header /> */}
-                    <ErrorDisplay error={ this.state.errorLog} />
+                    <RequestError error={ this.state.errorLog} />
                 </>
             );
         }
         return(
             <>
-                {/* <Header /> */}
+                { this.state.loadingQuestions ? <LoadingDisplay /> : (
                 <div className={ this.state.displayQuestions.concat(' container') }>
                     <div className='questionContainer'>
                     { this.state.randomQuestionList.map((el, index) => (
@@ -188,24 +173,10 @@ class Questions extends React.Component {
                             </div>
                         </div>)) }
                     </div>
+                    <DisplayButton class = { showSubmitButton?'btn btn-success navButton':'hideItem' } evaluate = { this.evaluateQuestions } />
                     <div className='row justify-content-center'>
-                        <button className={ showSubmitButton?'btn btn-success navButton':'hideItem' } onClick={ this.evaluateQuestions }>Evaluati</button>
-                    </div>
-                    <div className='row justify-content-center'>
-                        <button 
-                        value='-1' 
-                        disabled={ this.state.questionIndex===0 }
-                        onClick={ this.setIndex } 
-                        className='btn btn-primary stepButton navButton'>
-                            Inapoi
-                        </button>
-                        <button 
-                        value='1'
-                        disabled={ this.state.questionIndex+1===this.state.numberOfQuestions } 
-                        onClick={ this.setIndex } 
-                        className='btn btn-primary stepButton navButton'>
-                            Inainte
-                        </button>
+                        <NavigationButton value ='-1' disabled={ this.state.questionIndex===0 } navigate = { this.setIndex } /> 
+                        <NavigationButton value = '1' disabled={ this.state.questionIndex+1===this.state.numberOfQuestions } navigate = { this.setIndex } />
                     </div>
                     <div className='row justify-content-center'>
                         <div className='indexButtonsContainer'>
@@ -224,8 +195,8 @@ class Questions extends React.Component {
                             }) }
                         </div>
                     </div>
-                </div>
-                { this.state.results && <ShowChart data={ [...this.state.results] } /> }       
+                </div>) }
+                { this.state.results && <ShowChart data={ [...this.state.results] } /> }     
             </>
         )
     }
