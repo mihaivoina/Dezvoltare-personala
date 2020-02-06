@@ -1,15 +1,17 @@
 import React from 'react';
 import Axios from 'axios';
-import { ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import './questions.css';
 import ShowChart from '../chart';
 import randomNumbers from './randomNumbers';
 import DisplayButton from './displayButton';
-import NavigationButton from './navigationButton';
 import RequestError from '../errorComponent/requestError';
-import LoadingDisplay from './loadingDisplay';
+import LoadingDisplay from './loadingDisplay/loadingDisplay';
+import QuestionContainer from './Q&A/questionContainer';
+import IndexButtons from './indexButtons/indexButtons';
+import NavButtons from './navButtons/navButtons';
+import evaluateQuestions from './evaluateQuestions';
 
-class Questions extends React.Component {
+class Questions extends React.PureComponent {
     state = {
         numberOfQuestions: 2,
         randomQuestionList: [],
@@ -18,7 +20,9 @@ class Questions extends React.Component {
         results: null,
         token: null,
         loadingQuestions: true,
-        errorLog: null
+        errorLog: null,
+        URL: document.URL,
+        showSubmitButton: false
     }
     getToken () {
         const tokenArray = document.URL.split("#");
@@ -46,6 +50,7 @@ class Questions extends React.Component {
             question.score = "";
         }
         this.setState({
+            errorLog: null,
             randomQuestionList,
             loadingQuestions: false
         });
@@ -60,27 +65,8 @@ class Questions extends React.Component {
         return;
     }
 
-    //method for creating radio buttons for every question:
-    getRadio (obj) {
-        const radio = [];
-        for (let answer in obj.answers) {
-            let inputKey = obj.question.concat(answer);
-            radio.push(<ToggleButton
-                variant='btn btn-outline-primary answersButton'
-                name={ obj.question } 
-                id={ obj.answers.answer } 
-                value={ answer } 
-                key={ inputKey } 
-                checked={ this.state.randomQuestionList.question } 
-                onChange={ this.handleChange }>
-                    { obj.answers[answer] }
-                </ToggleButton>);
-        }
-        return radio;
-    }
-
     // method for answers selection
-    handleChange = e => {
+    recordAnswer = e => {
         const value = e.target.value;
         const question = e.target.name;
         const randomQuestionList = this.state.randomQuestionList;
@@ -90,49 +76,23 @@ class Questions extends React.Component {
             }
             return oldq;
         })
+        this.allQuetionsAnswered();
         this.setState({
             randomQuestionList
         })
     }
 
-    // submit action
-    evaluateQuestions = () => {
-        const finalAnswers = this.state.randomQuestionList;
-        // create list with all question topics:
-        const allTopics = finalAnswers.map(q => q.topic);
-        // filter topics and create list with individual topics :
-        const topicList = allTopics.reduce((topics, el) => {
-            if (!topics.includes(el)) {
-                topics.push(el);
-            }
-            return topics;
-        },[]);
-        let results = [];
-        for (let topic of topicList) {
-            results.push({topic,
-                          score: 0,
-                          numOfQuestions: 0,
-                          average: 0
-                        })
-        }
-        for (let result of results) {
-            finalAnswers.map(el => {
-                if (el.topic === result.topic) {
-                    result.numOfQuestions++;
-                    result.score += Number(el.score);
-                }
-                return result; 
-            })
-        }
-        for (let result of results) {
-            result.average = result.score/result.numOfQuestions;
-        }
-        const displayQuestions = "hideItem";
-        this.setState({
-            results,
-            displayQuestions
-        })  
+    evaluateAnswers = () => {
+        const evaluate = evaluateQuestions(this.state)
+        this.setState({...evaluate});
     }
+
+    allQuetionsAnswered = () => {
+        const showSubmitButton = this.state.randomQuestionList.every(question => question.score !== "");
+        this.setState({
+            showSubmitButton
+        })
+    } 
 
     // method for navigating questions list
     navigateQuestions = (el) => {
@@ -144,11 +104,13 @@ class Questions extends React.Component {
 
     componentDidMount () {
         this.getToken();
-        // this.getQuestions();
     }
 
     render () {
-        const showSubmitButton = this.state.randomQuestionList.every(question => question.score !== "")
+        window.onhashchange = () => { 
+            this.getToken();
+       }
+        
         if (this.state.errorLog) {
             return (
                 <>
@@ -160,41 +122,10 @@ class Questions extends React.Component {
             <>
                 { this.state.loadingQuestions ? <LoadingDisplay /> : (
                 <div className={ this.state.displayQuestions.concat(' container') }>
-                    <div className='questionContainer'>
-                    { this.state.randomQuestionList.map((el, index) => (
-                        <div className={ index === this.state.questionIndex?"":"hideItem"} key={ el.question.concat(index)}>
-                            <div className='question'>
-                                <p>{ el.question }</p>
-                            </div>
-                            <div className='answers'>
-                                <ToggleButtonGroup type='radio' name={ el.question } className='answersButtonsContainer'>
-                                    { this.getRadio(el) }
-                                </ToggleButtonGroup>
-                            </div>
-                        </div>)) }
-                    </div>
-                    <DisplayButton class = { showSubmitButton?'btn btn-success navButton':'hideItem' } evaluate = { this.evaluateQuestions } />
-                    <div className='row justify-content-center'>
-                        <NavigationButton value ='-1' disabled={ this.state.questionIndex===0 } navigate = { this.setIndex } /> 
-                        <NavigationButton value = '1' disabled={ this.state.questionIndex+1===this.state.numberOfQuestions } navigate = { this.setIndex } />
-                    </div>
-                    <div className='row justify-content-center'>
-                        <div className='indexButtonsContainer'>
-                            { this.state.randomQuestionList.map((el, index) => {
-                                const answeredQuestion = this.state.randomQuestionList[index].score ===""?"":" answered"
-                                const currentButton = index===this.state.questionIndex?'btn btn-outline-info active':('btn btn-outline-info').concat(answeredQuestion);
-                                const button =
-                                <button 
-                                key={ index } 
-                                value={ index } 
-                                className={ (currentButton).concat(' indexButton') } 
-                                onClick={ this.navigateQuestions }>
-                                    { index + 1 }
-                                </button>
-                                return button;
-                            }) }
-                        </div>
-                    </div>
+                    <QuestionContainer {...this.state} handleChange = {this.recordAnswer} />
+                    <DisplayButton class = { this.state.showSubmitButton?'btn btn-success navButton':'hideItem' } evaluate = { this.evaluateAnswers } />
+                    <NavButtons {...this.state} navigate={this.setIndex}/>
+                    <IndexButtons {...this.state} navigateQuestions={this.navigateQuestions}/>
                 </div>) }
                 { this.state.results && <ShowChart data={ [...this.state.results] } /> }     
             </>

@@ -38,7 +38,7 @@ class ShowChart extends React.Component {
         result.map(el => {
             topics.push(el.topic);
             score.push(el.average);
-            return;
+            return null;
         });
         this.setState({
             result,
@@ -98,7 +98,7 @@ class ShowChart extends React.Component {
                 }
             }
         }); 
-        // console.log(myCHart.data.datasets[0].data);
+        console.log(myCHart.data.datasets[0].data);
         
     }
     render() {
