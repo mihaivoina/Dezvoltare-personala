@@ -8,8 +8,8 @@ function App() {
   return (
     <>
     <Header />
-      <Questions />
-  </>
+    <Questions />
+    </>
   );
 }
 
