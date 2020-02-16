@@ -1,7 +1,7 @@
 import React from 'react';
-import Axios from 'axios';
 import './questions.css';
-import {ShowChart, randomNumbers, DisplayButton, RequestError, LoadingDisplay, QuestionContainer, IndexButtons, NavButtons, evaluateQuestions} from './index';
+import {ShowChart, DisplayButton, RequestError, LoadingDisplay, QuestionContainer, IndexButtons, NavButtons, evaluateQuestions} from './index';
+import RequestQuestions from './request/RequestQuestions';
 
 class Questions extends React.PureComponent {
     state = {
@@ -16,36 +16,42 @@ class Questions extends React.PureComponent {
         URL: document.URL,
         showSubmitButton: false
     }
+    // getToken () {
+    //     const tokenArray = document.URL.split("#");
+    //     const token = tokenArray[tokenArray.length - 1];
+    //     this.setState({
+    //         token
+    //     }, () => this.getQuestions ());
+    // }
+    // async getQuestions () {
+    //     const errorLog = [];
+    //     const res = await Axios(`http://localhost:3002/${ this.state.token }`).catch((error) => errorLog.push(error));
+    //     if (errorLog.length) {
+    //         this.setState ({
+    //             errorLog
+    //         })
+    //         return;
+    //     }
+    //     const questions = res.data;
+    //     const randomQuestionList = [];
+    //     const random = randomNumbers(this.state.numberOfQuestions, questions.length);
+    //     for (let num of random) {
+    //         randomQuestionList.push(questions[num])
+    //     }
+    //     for (let question of randomQuestionList) {
+    //         question.score = "";
+    //     }
+    //     this.setState({
+    //         errorLog: null,
+    //         randomQuestionList,
+    //         loadingQuestions: false
+    //     });
+    // }
+
     getToken () {
-        const tokenArray = document.URL.split("#");
-        const token = tokenArray[tokenArray.length - 1];
-        this.setState({
-            token
-        }, () => this.getQuestions ());
-    }
-    async getQuestions () {
-        const errorLog = [];
-        const res = await Axios(`http://localhost:3002/${ this.state.token }`).catch((error) => errorLog.push(error));
-        if (errorLog.length) {
-            this.setState ({
-                errorLog
-            })
-            return;
-        }
-        const questions = res.data;
-        const randomQuestionList = [];
-        const random = randomNumbers(this.state.numberOfQuestions, questions.length);
-        for (let num of random) {
-            randomQuestionList.push(questions[num])
-        }
-        for (let question of randomQuestionList) {
-            question.score = "";
-        }
-        this.setState({
-            errorLog: null,
-            randomQuestionList,
-            loadingQuestions: false
-        });
+        const request = RequestQuestions(this.state);
+        console.log(request);
+        this.setState({...request.PromiseValue});
     }
 
     //sets the index of the question to be displayed
