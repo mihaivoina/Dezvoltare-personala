@@ -49,9 +49,19 @@ class Questions extends React.PureComponent {
     // }
 
     getToken () {
-        const request = RequestQuestions(this.state);
-        console.log(request);
-        this.setState({...request.PromiseValue});
+        // const request = RequestQuestions(this.state);
+        // console.log(request);
+        RequestQuestions(this.state).then((response) => {
+            console.log(response.randomQuestionList)
+            // this.setState({
+            //     errorLog: response.errorLog,
+            //     randomQuestionList: response.randomQuestionList,
+            //     loadingQuestions: response.loadingQuestions
+            // }) 
+            this.setState({...response})
+            console.log('state', this.state.errorLog);
+            
+        })
     }
 
     //sets the index of the question to be displayed
