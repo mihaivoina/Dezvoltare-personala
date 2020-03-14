@@ -1,6 +1,6 @@
 import React from 'react';
 import './questions.css';
-import {ShowChart, DisplayButton, RequestError, LoadingDisplay, QuestionContainer, IndexButtons, NavButtons, evaluateQuestions} from './index';
+import { ShowChart, DisplayButton, RequestError, LoadingDisplay, QuestionContainer, IndexButtons, NavButtons, evaluateQuestions } from './index';
 import RequestQuestions from './request/RequestQuestions';
 
 class Questions extends React.PureComponent {
@@ -17,22 +17,16 @@ class Questions extends React.PureComponent {
         showSubmitButton: false
     }
 
-    getToken () {
+    getToken() {
         RequestQuestions(this.state).then((response) => {
-            this.setState({...response});
-        }).catch(() => {
-            this.setState({
-                errorLog: 'Faild to make request'
-            })
-        })
+            this.setState({ ...response });
+        }).catch(() => { this.setState({ errorLog: 'Failed to make request' }) })
     }
 
     //sets the index of the question to be displayed
     setIndex = (el) => {
         let questionIndex = this.state.questionIndex + Number(el.target.value);
-        this.setState({
-            questionIndex
-        })
+        this.setState({ questionIndex })
         return;
     }
 
@@ -48,57 +42,41 @@ class Questions extends React.PureComponent {
             return oldq;
         })
         this.allQuetionsAnswered();
-        this.setState({
-            randomQuestionList
-        })
+        this.setState({ randomQuestionList })
     }
 
     evaluateAnswers = () => {
         const evaluate = evaluateQuestions(this.state)
-        this.setState({...evaluate});
+        this.setState({ ...evaluate });
     }
 
     allQuetionsAnswered = () => {
         const showSubmitButton = this.state.randomQuestionList.every(question => question.score !== "");
-        this.setState({
-            showSubmitButton
-        })
-    } 
+        this.setState({ showSubmitButton })
+    }
 
     // method for navigating questions list
     navigateQuestions = (el) => {
         const questionIndex = Number(el.target.value);
-        this.setState({
-            questionIndex
-        });
+        this.setState({ questionIndex });
     }
 
-    componentDidMount () {
-        this.getToken();
-    }
+    componentDidMount() { this.getToken(); }
 
-    render () {
-        window.onhashchange = () => { 
-            this.getToken();
-       }
-        
-        if (this.state.errorLog) {
-            return (
-                <>
-                    <RequestError error={ this.state.errorLog} />
-                </>
-            );
-        }
-        return(
+    render() {
+        window.onhashchange = () => { this.getToken(); }
+
+        if (this.state.errorLog) { return (<RequestError error={this.state.errorLog} />); }
+        return (
             <>
-                { this.state.loadingQuestions ? <LoadingDisplay /> : (
-                <div className={ this.state.displayQuestions.concat(' container') }>
-                    <QuestionContainer {...this.state} handleChange = {this.recordAnswer} />
-                    <DisplayButton class = { this.state.showSubmitButton?'btn btn-success navButton':'hideItem' } evaluate = { this.evaluateAnswers } />
-                    <NavButtons {...this.state} navigate={this.setIndex}/>
-                    <IndexButtons {...this.state} navigateQuestions={this.navigateQuestions}/>
-                </div>) }
-                { this.state.results && <ShowChart data={ [...this.state.results] } /> }     
+                {this.state.loadingQuestions ? <LoadingDisplay /> : (
+                    <div className={this.state.displayQuestions.concat(' container')}>
+                        <QuestionContainer {...this.state} handleChange={this.recordAnswer} />
+                        <DisplayButton class={this.state.showSubmitButton ? 'btn btn-success navButton' : 'hideItem'} evaluate={this.evaluateAnswers} />
+                        <NavButtons {...this.state} navigate={this.setIndex} />
+                        <IndexButtons {...this.state} navigateQuestions={this.navigateQuestions} />
+                    </div>)}
+                {this.state.results && <ShowChart data={[...this.state.results]} />}
             </>
         )
     }
