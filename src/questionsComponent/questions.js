@@ -1,6 +1,6 @@
 import React from 'react';
 import './questions.css';
-import {ShowChart, DisplayButton, RequestError, LoadingDisplay, QuestionContainer, IndexButtons, NavButtons, evaluateQuestions} from './index';
+import {ShowChart, DisplayButton, RequestError, LoadingDisplay, QuestionContainer, IndexButtons, NavButtons, evaluateQuestions, postResults} from './index';
 import RequestQuestions from './request/RequestQuestions';
 
 class Questions extends React.PureComponent {
@@ -56,6 +56,9 @@ class Questions extends React.PureComponent {
     evaluateAnswers = () => {
         const evaluate = evaluateQuestions(this.state)
         this.setState({...evaluate});
+        postResults(this.state.randomQuestionList, this.state.token);
+        // console.log('obiect final', this.state.token);
+        
     }
 
     allQuetionsAnswered = () => {

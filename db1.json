@@ -1,533 +1,608 @@
 {
-    "questions": [
-        {
-            "topic": "SĂNĂTATE ȘI ENERGIE",
-            "question": "Cât de fericit te simți cu starea generala de sănătate și de bună-dispoziție pe care le ai acum,  la acest moment?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "SĂNĂTATE ȘI ENERGIE",
-            "question": "Cum apreciezi nivelul de energie pe care  îl ai pe parcursul unei zile?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "SĂNĂTATE ȘI ENERGIE",
-            "question": "Dacă ar fi să iți dai singur o notă raportată la mișcarea fizică efectuată zilnic vs greutatea corporală pe care o ai, care ar fi acea nota?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "EMOȚII ȘI OBIECTIVE",
-            "question": "Cum te-ai aprecia din punct de vedere al stării psihologice, al calmului și al stării de spirit și al stabilității emoționale?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "EMOȚII ȘI OBIECTIVE",
-            "question": "Cum te apreciezi din punct de vedere emoțional al bunăstării pe care o ai?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "EMOȚII ȘI OBIECTIVE",
-            "question": "Cât de echilibrat „jonglezi” cu nervii și cu provocarile emoționale cu care te confrunți zi de zi?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
-            "question": "Cum ai descrie calitatea relațiilor tale sentimentale -  anterioare și actuale?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
-            "question": "Cum apreciezi calitatea relației și întreținerea acesteia cu membrii familiei?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
-            "question": "Cum ai aprecia calitatea relațiilor cu prietenii, colegii, partenerii de afaceri de până acum?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
-            "question": "Cât de eficient și productiv ești în stabilirea și îndeplinirea sarcinilor și obiectivelor zilnice?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
-            "question": "Cum te simți, vis-a-vis de timpul rămas la dispoziție pentru „alimentarea” pasiunii tale și lucrul la obiectivele personale, altele decât de sarcinile zilnice?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
-            "question": "Cum ai aprecia rata de îndeplinire a sarcinilor de tip multi-tasking și îndeplinirea sarcinilor personale și profesionale?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "PROFESIE/CARIERĂ/MISIUNE",
-            "question": "Cât de fericit(ă) ești acum cu job-ul pe care îl ai sau cu activitatea profesională pe care o faci? (oricare ar fi aceea)",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "PROFESIE/CARIERĂ/MISIUNE",
-            "question": "Cum apreciezi emoția și împlinirea pe care le simți la locul actual de muncă – cum evaluezi starea cu care te gângești la muncă?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "PROFESIE/CARIERĂ/MISIUNE",
-            "question": "Ce notă ți-ai da în legătură cu prezența ta și cu potențialul de îndeplinire pe care îl are misiunea ta/ scopul tău?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "BANI/ECONOMII/FINANȚE",
-            "question": "Cât de „bine” stai acum, când vine vorba de sigurana ta financiară?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "BANI/ECONOMII/FINANȚE",
-            "question": "Cum apreciezi veniturile tale curente față de cât crezi tu că ești capabil și cât meriți?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "BANI/ECONOMII/FINANȚE",
-            "question": "Evaluează nivelul tau de bunăstare financiară.",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "CONTRIBUȚIE/SPIRITUALITATE",
-            "question": "Cum apreciezi abilitatea ta de a te bucura și celebra VIAȚA – orice ar însemna pentru tine personal, această exprimare și modalitățile de a o face?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "CONTRIBUȚIE/SPIRITUALITATE",
-            "question": "Cum apreciezi abilitatea ta de a te conecta și a împărtăși talentele personale și alte „daruri” specifice cu cei din jur și din comunitatea în care trăiești? Altfel spus, contribui cu generozitate și regularitate necondiționat (fara A TE G NDI  la vreo recompensă)?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "CONTRIBUȚIE/SPIRITUALITATE",
-            "question": "Cu ce notă ți-ai evalua sensul și misiunea pe care o ai de îndeplinit în această viață?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
-            "question": "Cu ce notă ți-ai evalua gradul de responsabilitate pe care l-ai avut pana acum vis-a-vis de deciziile luate?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
-            "question": "Ce notă ți-ai da pentru sinceritatea cu care ai răspuns până acum la întrebarile anterioare?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
-            "question": "Cât de aproape sau de departe simți că ești față de statutul de lider?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "Cum te vezi din punct de vedere al sănătății și mișcării fizice peste 1-3 ani?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "Cum te vezi din punct de vedere al indeplinirii obiectivelor propuse și al vieții emoționale, peste 1-3 ani?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "Unde te vezi din punct de vedere relațional peste 1-3 ani?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "Cum te vezi din punct de vedere al managementului timpului, al eficienței și productivității peste 6 luni?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "Te vezi,  din punct de vedere profesional/al carierei realizat peste 5 ani?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "Cum te vezi din punct de vedere al situației financiare peste 3 ani?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        },
-        {
-            "topic": "OBIECTIVE",
-            "question": "La ce nivel îți dorești să ajungă nivelul contribuțiilor tale către semeni și comunitate, peste 1- 3 ani?",
-            "answers": {
-                "1": "1",
-                "2": "2",
-                "3": "3",
-                "4": "4",
-                "5": "5",
-                "6": "6",
-                "7": "7",
-                "8": "8",
-                "9": "9",
-                "10": "10"
-            }
-        }
-    ],
-    "1234": [
-        {
+  "1234": [
+    {
+      "topic": "SĂNĂTATE ȘI ENERGIE",
+      "question": "Cât de fericit te simți cu starea generala de sănătate și de bună-dispoziție pe care le ai acum,  la acest moment?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "SĂNĂTATE ȘI ENERGIE",
+      "question": "Cum apreciezi nivelul de energie pe care  îl ai pe parcursul unei zile?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    }
+  ],
+  "12345": [
+    [
+      {
         "topic": "SĂNĂTATE ȘI ENERGIE",
         "question": "Cât de fericit te simți cu starea generala de sănătate și de bună-dispoziție pe care le ai acum,  la acest moment?",
         "answers": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "10"
-        }
-    },
-    {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10"
+        },
+        "score": "1"
+      },
+      {
         "topic": "SĂNĂTATE ȘI ENERGIE",
         "question": "Cum apreciezi nivelul de energie pe care  îl ai pe parcursul unei zile?",
         "answers": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "10"
-        }
-    }] 
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10"
+        },
+        "score": "1"
+      }
+    ],
+    [
+      {
+        "topic": "SĂNĂTATE ȘI ENERGIE",
+        "question": "Cât de fericit te simți cu starea generala de sănătate și de bună-dispoziție pe care le ai acum,  la acest moment?",
+        "answers": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10"
+        },
+        "score": "10"
+      },
+      {
+        "topic": "SĂNĂTATE ȘI ENERGIE",
+        "question": "Cum apreciezi nivelul de energie pe care  îl ai pe parcursul unei zile?",
+        "answers": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "10"
+        },
+        "score": "10"
+      }
+    ]
+  ],
+  "questions": [
+    {
+      "topic": "SĂNĂTATE ȘI ENERGIE",
+      "question": "Cât de fericit te simți cu starea generala de sănătate și de bună-dispoziție pe care le ai acum,  la acest moment?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "SĂNĂTATE ȘI ENERGIE",
+      "question": "Cum apreciezi nivelul de energie pe care  îl ai pe parcursul unei zile?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "SĂNĂTATE ȘI ENERGIE",
+      "question": "Dacă ar fi să iți dai singur o notă raportată la mișcarea fizică efectuată zilnic vs greutatea corporală pe care o ai, care ar fi acea nota?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "EMOȚII ȘI OBIECTIVE",
+      "question": "Cum te-ai aprecia din punct de vedere al stării psihologice, al calmului și al stării de spirit și al stabilității emoționale?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "EMOȚII ȘI OBIECTIVE",
+      "question": "Cum te apreciezi din punct de vedere emoțional al bunăstării pe care o ai?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "EMOȚII ȘI OBIECTIVE",
+      "question": "Cât de echilibrat „jonglezi” cu nervii și cu provocarile emoționale cu care te confrunți zi de zi?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
+      "question": "Cum ai descrie calitatea relațiilor tale sentimentale -  anterioare și actuale?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
+      "question": "Cum apreciezi calitatea relației și întreținerea acesteia cu membrii familiei?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "RELAȚIILE CU FAMILIA ȘI PRIETENII",
+      "question": "Cum ai aprecia calitatea relațiilor cu prietenii, colegii, partenerii de afaceri de până acum?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
+      "question": "Cât de eficient și productiv ești în stabilirea și îndeplinirea sarcinilor și obiectivelor zilnice?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
+      "question": "Cum te simți, vis-a-vis de timpul rămas la dispoziție pentru „alimentarea” pasiunii tale și lucrul la obiectivele personale, altele decât de sarcinile zilnice?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "MANAGEMENTUL TIMPULUI, HOBBY-URI ȘI DISTRACȚII",
+      "question": "Cum ai aprecia rata de îndeplinire a sarcinilor de tip multi-tasking și îndeplinirea sarcinilor personale și profesionale?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "PROFESIE/CARIERĂ/MISIUNE",
+      "question": "Cât de fericit(ă) ești acum cu job-ul pe care îl ai sau cu activitatea profesională pe care o faci? (oricare ar fi aceea)",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "PROFESIE/CARIERĂ/MISIUNE",
+      "question": "Cum apreciezi emoția și împlinirea pe care le simți la locul actual de muncă – cum evaluezi starea cu care te gângești la muncă?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "PROFESIE/CARIERĂ/MISIUNE",
+      "question": "Ce notă ți-ai da în legătură cu prezența ta și cu potențialul de îndeplinire pe care îl are misiunea ta/ scopul tău?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "BANI/ECONOMII/FINANȚE",
+      "question": "Cât de „bine” stai acum, când vine vorba de sigurana ta financiară?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "BANI/ECONOMII/FINANȚE",
+      "question": "Cum apreciezi veniturile tale curente față de cât crezi tu că ești capabil și cât meriți?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "BANI/ECONOMII/FINANȚE",
+      "question": "Evaluează nivelul tau de bunăstare financiară.",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "CONTRIBUȚIE/SPIRITUALITATE",
+      "question": "Cum apreciezi abilitatea ta de a te bucura și celebra VIAȚA – orice ar însemna pentru tine personal, această exprimare și modalitățile de a o face?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "CONTRIBUȚIE/SPIRITUALITATE",
+      "question": "Cum apreciezi abilitatea ta de a te conecta și a împărtăși talentele personale și alte „daruri” specifice cu cei din jur și din comunitatea în care trăiești? Altfel spus, contribui cu generozitate și regularitate necondiționat (fara A TE G NDI  la vreo recompensă)?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "CONTRIBUȚIE/SPIRITUALITATE",
+      "question": "Cu ce notă ți-ai evalua sensul și misiunea pe care o ai de îndeplinit în această viață?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
+      "question": "Cu ce notă ți-ai evalua gradul de responsabilitate pe care l-ai avut pana acum vis-a-vis de deciziile luate?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
+      "question": "Ce notă ți-ai da pentru sinceritatea cu care ai răspuns până acum la întrebarile anterioare?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "CREȘTERE ȘI DEZVOLTARE PERSONALĂ",
+      "question": "Cât de aproape sau de departe simți că ești față de statutul de lider?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "Cum te vezi din punct de vedere al sănătății și mișcării fizice peste 1-3 ani?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "Cum te vezi din punct de vedere al indeplinirii obiectivelor propuse și al vieții emoționale, peste 1-3 ani?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "Unde te vezi din punct de vedere relațional peste 1-3 ani?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "Cum te vezi din punct de vedere al managementului timpului, al eficienței și productivității peste 6 luni?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "Te vezi,  din punct de vedere profesional/al carierei realizat peste 5 ani?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "Cum te vezi din punct de vedere al situației financiare peste 3 ani?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    },
+    {
+      "topic": "OBIECTIVE",
+      "question": "La ce nivel îți dorești să ajungă nivelul contribuțiilor tale către semeni și comunitate, peste 1- 3 ani?",
+      "answers": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+      }
+    }
+  ]
 }

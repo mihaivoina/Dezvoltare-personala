@@ -21,7 +21,8 @@ const RequestQuestions = async (props) => {
     return {
         errorLog: null,
         randomQuestionList,
-        loadingQuestions: false
+        loadingQuestions: false,
+        token
     }
 }
 

@@ -50,7 +50,7 @@ class ShowChart extends React.Component {
 
     }
     updateCanvas = () => {
-        console.log(this.state.score);
+        // console.log(this.state.score);
         
         const ctx = this.refs.canvas.getContext('2d');
         ctx.fillRect(0,0, 100, 100);
@@ -98,7 +98,7 @@ class ShowChart extends React.Component {
                 }
             }
         }); 
-        console.log(myCHart.data.datasets[0].data);
+        // console.log(myCHart.data.datasets[0].data);
         
     }
     render() {

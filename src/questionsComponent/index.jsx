@@ -8,6 +8,7 @@ import QuestionContainer from './Q&A/questionContainer';
 import IndexButtons from './indexButtons/indexButtons';
 import NavButtons from './navButtons/navButtons';
 import evaluateQuestions from './evaluateQuestions';
+import postResults from './request/PostResults';
 
 export {
     ShowChart,
@@ -18,5 +19,6 @@ export {
     QuestionContainer,
     IndexButtons,
     NavButtons,
-    evaluateQuestions
+    evaluateQuestions,
+    postResults
 } 
